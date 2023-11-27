@@ -82,7 +82,7 @@ export default function Home() {
 			return { width: 200, height: 200 };
 		}
 		// Default dimensions for other cases
-		return { width: 400, height: 'auto' }; 
+		return { width: 300, height: 'auto' }; 
 	};
 	
 	const imageDimensions = getImageDimensions();
@@ -91,7 +91,7 @@ export default function Home() {
 
     return (
 		<>
-        <section className="flex h-5/6 flex-col md:flex-row items-center justify-center gap-4 py-8 md:py-10">
+        <section className="flex h-5/6 flex-col md:flex-row items-center justify-center gap-2 py-4 md:py-10">
             <div className="flex-1 flex items-center justify-center md:justify-start">
                 <Image 
                     alt={currentProject.title}
@@ -103,17 +103,17 @@ export default function Home() {
             </div>
             <div className="flex-1 flex flex-col items-center md:items-start">
                 <h1 className="text-xl font-bold mb-2 text-black">{currentProject.title}</h1>
-                <h2 className="text-lg mb-4 text-black">{currentProject.subtitle}</h2>
-                <p className="mb-4 text-black">{currentProject.description}</p>
+                <h2 className="text-md mb-4 text-gray-700">{currentProject.subtitle}</h2>
+                <p className="mb-4 text-center text-black">{currentProject.description}</p>
                 <div className="flex flex-row md:flex-row gap-2">
-                    <button className="flex-1 px-4 py-2 bg-blue-500 text-white rounded">Explore</button>
-                    <button className="flex-1 px-4 py-2 bg-green-500 text-white rounded">Download</button>
+                    <button className="flex-1 px-4 py-2 bg-blue-500 text-white rounded-[10px]">Explore</button>
+                    <button className="flex-1 px-4 py-2 bg-green-500 text-white rounded-[10px]">Download</button>
                 </div>
                 {/* Add more content as needed */}
             </div>
         </section>
 		<div className="justify-center items-center">
-		<footer className="w-full flex justify-center mt-7"  >
+		<footer className="w-full flex justify-center mt-5"  >
           
             <button onClick={handlePrevClick} ><ChevronLeft size={16} /></button>
             1/3
