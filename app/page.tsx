@@ -106,8 +106,8 @@ export default function Home() {
                 <h2 className="text-md mb-4 text-gray-700">{currentProject.subtitle}</h2>
                 <p className="mb-4 text-center text-black">{currentProject.description}</p>
                 <div className="flex flex-row md:flex-row gap-2">
-                    <button className="flex-1 px-4 py-2 bg-blue-500 text-white rounded-[10px]">Explore</button>
-                    <button className="flex-1 px-4 py-2 bg-green-500 text-white rounded-[10px]">Download</button>
+                    <button className="flex-1 px-4 py-2 bg-blue-800 text-white rounded-[10px]">Explore</button>
+                    <button className="flex-1 px-4 py-2 bg-green-800 text-white rounded-[10px]">Download</button>
                 </div>
                 {/* Add more content as needed */}
             </div>
@@ -116,7 +116,7 @@ export default function Home() {
 		<footer className="w-full flex justify-center mt-5"  >
           
             <button onClick={handlePrevClick} ><ChevronLeft size={16} /></button>
-            1/3
+            {currentProjectIndex + 1} / 3
             <button onClick={handleNextClick} ><ChevronRight size={16} /></button>
         </footer>
 		</div>
