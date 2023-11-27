@@ -1,51 +1,126 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+"use client"
+import React, { useState, useEffect } from "react";
+import { Image } from "@nextui-org/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+
+
+interface WindowSize {
+    width: number | undefined;
+    height: number | undefined;
+}
 
 export default function Home() {
-	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
-			</div>
+    const [windowSize, setWindowSize] = useState<WindowSize>({
+        width: undefined,
+        height: undefined,
+    });
+	const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+	
 
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
 
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
-		</section>
-	);
+	const projects = [
+		{
+		  imageUrl: '/gibheStadium.jpg',
+		  title: 'Stadium',
+		  subtitle: 'iOS 2023',
+		  description: 'A collection of works that reimagine how we narrate a game of football',
+		  link: 'https://res.cloudinary.com/vambo/image/upload/v1700046875/q87tgm1egvaacu7i05ex.jpg'
+		},
+		{
+		  imageUrl: '/xsDemoVid.gif',
+		  title: 'XS',
+		  subtitle: 'iOS 2023',
+		  description: 'A visual representation of the quality of your internet connection',
+		  link: '/xs'
+		},
+		{
+		  imageUrl: '/arrowPlay.gif',
+		  title: 'Down/Up',
+		  subtitle: 'iOS 2023',
+		  description: 'A visual representation of the quality of your internet connection',
+		  link: '/downup'
+		}
+	]
+
+	const handlePrevClick = () => {
+        setCurrentProjectIndex(prevIndex => Math.max(0, prevIndex - 1));
+    };
+
+    const handleNextClick = () => {
+        setCurrentProjectIndex(prevIndex => Math.min(projects.length - 1, prevIndex + 1));
+    };
+
+    useEffect(() => {
+        // Handler to call on window resize
+        const handleResize = () => {
+            // Set window width/height to state
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+        
+        // Add event listener
+        window.addEventListener("resize", handleResize);
+        
+        // Call handler right away so state gets updated with initial window size
+        handleResize();
+        
+        // Remove event listener on cleanup
+        return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount and unmount
+
+	const currentProject = projects[currentProjectIndex];
+
+	const getImageDimensions = () => {
+		if (currentProject.title === 'XS') {
+			// For 'XS' project, set size based on window width
+			return windowSize.width && windowSize.width <= 600 ? { width: 100, height: 100 } : { width: 300, height: 300 };
+		} else if (windowSize.width && windowSize.width <= 600 && currentProject.title === 'Stadium') {
+			// For 'Stadium' project on mobile view
+			return { width: 200, height: 200 };
+		}
+		// Default dimensions for other cases
+		return { width: 400, height: 'auto' }; 
+	};
+	
+	const imageDimensions = getImageDimensions();
+	
+
+
+    return (
+		<>
+        <section className="flex h-5/6 flex-col md:flex-row items-center justify-center gap-4 py-8 md:py-10">
+            <div className="flex-1 flex items-center justify-center md:justify-start">
+                <Image 
+                    alt={currentProject.title}
+                    src={currentProject.imageUrl} 
+                    width={imageDimensions.width}
+                        height={imageDimensions.height}
+
+                />
+            </div>
+            <div className="flex-1 flex flex-col items-center md:items-start">
+                <h1 className="text-xl font-bold mb-2 text-black">{currentProject.title}</h1>
+                <h2 className="text-lg mb-4 text-black">{currentProject.subtitle}</h2>
+                <p className="mb-4 text-black">{currentProject.description}</p>
+                <div className="flex flex-row md:flex-row gap-2">
+                    <button className="flex-1 px-4 py-2 bg-blue-500 text-white rounded">Explore</button>
+                    <button className="flex-1 px-4 py-2 bg-green-500 text-white rounded">Download</button>
+                </div>
+                {/* Add more content as needed */}
+            </div>
+        </section>
+		<div className="justify-center items-center">
+		<footer className="w-full flex justify-center mt-7"  >
+          
+            <button onClick={handlePrevClick} ><ChevronLeft size={16} /></button>
+            1/3
+            <button onClick={handleNextClick} ><ChevronRight size={16} /></button>
+        </footer>
+		</div>
+		
+		</>
+    );
 }
