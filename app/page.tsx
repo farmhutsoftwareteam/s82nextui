@@ -115,7 +115,7 @@ export default function Home() {
             </div>
         </section>
 		<div className="justify-center items-center h-2/6">
-		<footer className="w-full flex justify-center mt-5"  >
+		<footer className="w-full flex justify-center mt-10"  >
           
             <button onClick={handlePrevClick} ><ChevronLeft size={16} /></button>
             {currentProjectIndex + 1} / 3
