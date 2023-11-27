@@ -74,24 +74,26 @@ export default function Home() {
 	const currentProject = projects[currentProjectIndex];
 
 	const getImageDimensions = () => {
-		if (currentProject.title === 'XS') {
-			// For 'XS' project, set size based on window width
-			return windowSize.width && windowSize.width <= 600 ? { width: 100, height: 100 } : { width: 300, height: 300 };
-		} else if (windowSize.width && windowSize.width <= 600 && currentProject.title === 'Stadium') {
-			// For 'Stadium' project on mobile view
-			return { width: 200, height: 200 };
-		}
-		// Default dimensions for other cases
-		return { width: 300, height: 'auto' }; 
-	};
-	
-	const imageDimensions = getImageDimensions();
+        if (currentProject.title === 'XS') {
+            // For 'XS' project, set size based on window width
+            return windowSize.width && windowSize.width <= 600 ? { width: 100, height: 100 } : { width: 300, height: 300 };
+        } else if (windowSize.width && windowSize.width <= 600 && 
+                   (currentProject.title === 'Stadium' || currentProject.title === 'Down/Up')) {
+            // For 'Stadium' and 'Down/Up' projects on mobile view
+            return { width: 200, height: 200 };
+        }
+        // Default dimensions for other cases
+        return { width: 300, height: 'auto' }; 
+    };
+    
+    const imageDimensions = getImageDimensions();
+    
 	
 
 
     return (
 		<>
-        <section className="flex h-5/6 flex-col md:flex-row items-center justify-center gap-2 py-4 md:py-10">
+        <section className="flex h-4/6 flex-col md:flex-row items-center justify-center gap-2 py-2 md:py-6">
             <div className="flex-1 flex items-center justify-center md:justify-start">
                 <Image 
                     alt={currentProject.title}
@@ -112,7 +114,7 @@ export default function Home() {
                 {/* Add more content as needed */}
             </div>
         </section>
-		<div className="justify-center items-center">
+		<div className="justify-center items-center h-2/6">
 		<footer className="w-full flex justify-center mt-5"  >
           
             <button onClick={handlePrevClick} ><ChevronLeft size={16} /></button>
