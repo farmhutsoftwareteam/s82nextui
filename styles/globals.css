@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Proforma';
+    src: url('/Proforma-Regular+.otf');
+
+}
+
+@font-face {
+    font-family: 'ValueSerifMedium';
+    src: url('/value-serif-medium-pro.ttf');
+}

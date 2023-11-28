@@ -42,7 +42,7 @@ export default function RootLayout({
 			<body
 				className={clsx(
 					"min-h-screen  font-sans antialiased bg-[#E7E7DD]",
-					fontSans.variable
+					
 				)}
 			>
 				        <ProjectNavigationProvider>
