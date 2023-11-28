@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Image } from "@nextui-org/image";
+import Head from 'next/head';
 
 export default function AboutPage() {
   const [imageWidth, setImageWidth] = useState(200); // default width for mobile
@@ -9,7 +10,7 @@ export default function AboutPage() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setImageWidth(200);
+        setImageWidth(150);
       } else {
         setImageWidth(150);
       }
@@ -21,8 +22,12 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-1">
-      <div className="flex order-2 md:order-1 flex-col items-center justify-center text-center md:w-1/2">
+    <>
+    <Head>
+      
+    </Head>
+    <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
+      <div className="flex order-2 md:px-0 md:order-1 flex-col items-center justify-center text-center md:w-1/3">
         <Image
           width={imageWidth}
           height={imageWidth}
@@ -36,11 +41,12 @@ export default function AboutPage() {
         </div>
       </div>
       
-      <div className="md:w-1/3 md:order-2 text-center md:text-left px-4 md:px-0">
+      <div className="md:w-1/3 md:order-2 text-center md:justify-center md:text-left px-4 md:px-0">
         <p className="text-[15px] md:text-[16px]">
           We are a design studio that works at the intersection of everyday technology and art. Most of modern life is spent interacting with technology that is bland at best. Our objective is to bring beauty and simplicity to the mundane activities of life.
         </p>
       </div>
     </div>
+    </>
   );
 }

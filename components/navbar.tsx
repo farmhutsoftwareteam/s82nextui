@@ -51,7 +51,7 @@ export const Navbar = () => {
 				<NavbarMenu className="bg-[#E7E7DD] items-center justify-center mx-auto">
 					<div className="items-center justify-center flex flex-col gap-2">
 						<NavbarMenuItem>
-							<Link className="font-bold font-proforma" color="foreground" href="#" size="lg">
+							<Link className="font-bold font-proforma" color="foreground" href="/" size="lg">
 								Pieces
 							</Link>
 						</NavbarMenuItem>
