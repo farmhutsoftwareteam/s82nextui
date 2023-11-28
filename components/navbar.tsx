@@ -70,8 +70,8 @@ export const Navbar = () => {
 		</NavbarContent>
 
 		{/* Navbar Menu */}
-		<NavbarMenu>
-			<div className="mx-4 mt-2 flex flex-col gap-2">
+		<NavbarMenu className="bg-[#E7E7DD]">
+			<div className="mx-4 items-center  justify-center mt-2 flex bg-[#E7E7DD] flex-col gap-2">
 				{siteConfig.navMenuItems.map((item, index) => (
 					<NavbarMenuItem className="justify-center items-center" key={`${item}-${index}`}>
 						<Link
