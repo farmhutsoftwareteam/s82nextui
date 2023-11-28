@@ -1,5 +1,4 @@
-'use client'
-
+"use client"
 import React, { useState, useEffect } from 'react';
 import { Image } from "@nextui-org/image";
 
@@ -12,7 +11,7 @@ export default function AboutPage() {
       if (window.innerWidth >= 768) {
         setImageWidth(400);
       } else {
-        setImageWidth(200);
+        setImageWidth(150);
       }
     };
 
@@ -28,18 +27,18 @@ export default function AboutPage() {
 
   return (
     <div className="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start gap-4 md:gap-8">
-      <div className="md:w-1/2 md:order-1 text-center md:justify-center md:items-center justify-center items-center md:text-left">
+      <div className="md:w-1/2 text-center md:text-left order-1 md:order-2">
+        <p className="text-[15px] md:text-lg md:w-max-lg">
+          We are a design studio that works at the intersection of everyday technology and art. Most of modern life is spent interacting with technology that is bland at best. Our objective is to bring beauty and simplicity to the mundane activities of life.
+        </p>
+      </div>
+      <div className="md:w-1/2 text-center justify-center items-center order-1 md:order-1">
         <Image
           width={imageWidth} // Dynamic width based on device size
           alt="NextUI hero Image"
           src="./IMG_2907.jpeg"
           style={{ borderRadius: '0px' }} // Remove rounded corners
         />
-      </div>
-      <div className="md:w-1/2 md:order-2">
-        <p className="text-center md:text-lg md:text-left md:w-max-lg">
-          We are a design studio that works at the intersection of everyday technology and art. Most of modern life is spent interacting with technology that is bland at best. Our objective is to bring beauty and simplicity to the mundane activities of life.
-        </p>
       </div>
     </div>
   );
