@@ -30,10 +30,11 @@ export default function AboutPage() {
           src="./IMG_2907.jpeg"
           radius='none'
         />
-        <p className='text-[12px] mt-2'>Blue and Pink (fromXS)</p>
+        <p className='text-[12px] mt-2'>Blue and Pink</p>
+		<p className='text-[12px]'> (from Xs)</p>
       </div>
       <div className="text-center md:text-left order-1 md:order-2 py-8 md:w-2/3">
-        <p className="text-[15px] md:text-lg md:max-w-3xl">
+        <p className="text-[15px] md:text-[16px] md:max-w-3xl">
           We are a design studio that works at the intersection of everyday technology and art. Most of modern life is spent interacting with technology that is bland at best. Our objective is to bring beauty and simplicity to the mundane activities of life.
         </p>
       </div>
