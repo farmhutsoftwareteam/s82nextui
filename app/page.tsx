@@ -31,7 +31,7 @@ export default function Home() {
 		  imageUrl: '/xsDemoVid.gif',
 		  title: 'XS',
 		  subtitle: 'iOS 2023',
-		  description: 'A visual representation of the quality of your internet connection',
+		  description: "A compilation of works where you shape the experience, visually or through touch",
 		  link: '/xs'
 		},
 		{
