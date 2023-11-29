@@ -35,30 +35,16 @@ const Stadium = () => {
 
           {/* Timeline Entries */}
           {/* Timeline Section */}
-          <div className="w-full  mt-6">
-          <h2 className="text-xl font-semibold md:w-max text-center md:text-left mb-4">Behind the scenes</h2>
-          <p className="text-center md:text-left text-gray-600 mb-4">
-            This is a timeline of how this came to be. Hopefully it shows the chaotic process of making something and the fun of building.
-          </p>
+          {/* <div className="w-full  mt-6"> */}
+          {/* <h2 className="text-xl font-semibold md:w-max text-center md:text-left mb-4">Behind the scenes</h2> */}
+          {/* <p className="text-center md:text-left text-gray-600 mb-4"> */}
+          {/*   This is a timeline of how this came to be. Hopefully it shows the chaotic process of making something and the fun of building. */}
+          {/* </p> */}
 
        
-          {timelineEntries.map((entry, index) => (
-            <div key={index} className="grid grid-cols-2 justify-between mb-4 border-dashed border-t-0 border-red-500 border-1 border-x-0 py-3">
-              <div className="col-start-1 col-end-2 flex items-center justify-start">{entry.title}</div>
-              <div className="col-start-2 col-end-3 flex justify-end">
-                <Image
-                  src='/gibhee.png'
-                  alt={entry.title}
-                  objectFit="cover"
-                  width={50}
-                  height="auto"
-                  radius='none'
-                />
-              </div>
-            </div>
-          ))}
+          {/* comment this out */}
 
-        </div>
+        {/* </div> */}
         </div>
       </div>
       <div className="flex justify-center md:items-start items-center order-1 md:order-1">
