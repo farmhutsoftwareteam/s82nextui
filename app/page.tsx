@@ -94,7 +94,7 @@ export default function Home() {
     return (
 		<>
         <section className="flex h-4/6 flex-col md:flex-row items-center justify-center gap-2 py-2 md:py-6">
-            <div className="flex-1 flex items-center justify-center md:justify-start">
+            <div className="flex-1 flex items-center justify-center md:justify-center">
                 <Image 
                     alt={currentProject.title}
                     src={currentProject.imageUrl} 

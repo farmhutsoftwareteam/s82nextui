@@ -41,15 +41,15 @@ export default function RootLayout({
 			</head>
 			<body
 				className={clsx(
-					"min-h-screen  font-sans antialiased bg-[#E7E7DD]",
+					"min-h-screen w-full font-sans antialiased bg-[#E7E7DD]",
 					
 				)}
 			>
 				        <ProjectNavigationProvider>
 
-					<div className="relative flex flex-col h-screen bg-[#E7E7DD] ">
+					<div className="relative flex flex-col h-screen w-full bg-[#E7E7DD] ">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 bg-[#E7E7DD] flex-grow">
+						<main className="container mx-auto max-w-full pt-16 px-6 bg-[#E7E7DD] flex-grow">
 							{children}
 						
 

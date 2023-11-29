@@ -61,7 +61,7 @@ export const Navbar = () => {
 							</Link>
 						</NavbarMenuItem>
 						<NavbarMenuItem>
-							<Link color="foreground" className="font-bold font-proforma" href="#" size="lg">
+							<Link color="foreground" className="font-bold font-proforma" href="/contact" size="lg">
 								Contact Us
 							</Link>
 						</NavbarMenuItem>
