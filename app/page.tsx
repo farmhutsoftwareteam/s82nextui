@@ -108,7 +108,7 @@ export default function Home() {
                 <h2 className="text-md mb-4 text-gray-700">{currentProject.subtitle}</h2>
                 <p className="mb-4 text-center text-black">{currentProject.description}</p>
                 <div className="flex flex-row md:flex-row gap-2">
-                    <button className="flex-1 px-4 py-2 bg-blue-800 text-white rounded-[10px]">Explore</button>
+                    <a href={currentProject.link} className="flex-1 px-4 py-2 bg-blue-800 text-white rounded-[10px]">Explore</a>
                     <button className="flex-1 px-4 py-2 bg-green-800 text-white rounded-[10px]">Download</button>
                 </div>
                 {/* Add more content as needed */}

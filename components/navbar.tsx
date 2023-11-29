@@ -40,7 +40,7 @@ export const Navbar = () => {
 								alt="NextUI hero Image"
 								src="https://res.cloudinary.com/vambo/image/upload/v1700045764/ibks2re37opafb4ukiwm.png"
 							/>
-							<span className="font-bold font-proforma  text-black">Studio 82</span>
+							<span className="font-bold font-valueserif  text-black">Studio 82</span>
 						</a>
 					</NextLink>
 				</NavbarBrand>
