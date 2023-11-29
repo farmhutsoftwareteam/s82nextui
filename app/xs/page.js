@@ -30,7 +30,7 @@ const Stadium = () => {
         <Image
           src="/xsDemoVid.gif" // Replace with your image path
           alt="Stadium"
-          objectFit='contain'
+          
           width={150}
           height={150}
         />
