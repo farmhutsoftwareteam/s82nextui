@@ -10,7 +10,7 @@ export default function AboutPage() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setImageWidth(150);
+        setImageWidth(300);
       } else {
         setImageWidth(150);
       }
@@ -43,7 +43,7 @@ export default function AboutPage() {
       
       <div className="md:w-1/3 md:order-2 text-center md:justify-center md:text-left px-4 md:px-0">
         <p className="text-[15px] md:text-[16px]">
-          We are a design studio that works at the intersection of everyday technology and art. Most of modern life is spent interacting with technology that is bland at best. Our objective is to bring beauty and simplicity to the mundane activities of life.
+        We're a design studio that works at the intersection of everyday technology and art. Most of modern life is spent interacting with bland technology at best. Our objective is to bring beauty and simplicity to the mundane activities of life, as illustrated by this composition made of bed sheets that had stayed for too long in a dryer. We like to have fun and create beautiful products. That's our M.O.
         </p>
       </div>
     </div>
