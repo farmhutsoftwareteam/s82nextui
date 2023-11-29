@@ -76,7 +76,7 @@ export default function Home() {
 	const getImageDimensions = () => {
         if (currentProject.title === 'XS') {
             // For 'XS' project, set size based on window width
-            return windowSize.width && windowSize.width <= 600 ? { width: 100, height: 100 } : { width: 300, height: 300 };
+            return windowSize.width && windowSize.width <= 600 ? { width: 100, height: 100 } : { width: 150, height: 150 };
         } else if (windowSize.width && windowSize.width <= 600 && 
                    (currentProject.title === 'Stadium' || currentProject.title === 'Down/Up')) {
             // For 'Stadium' and 'Down/Up' projects on mobile view
