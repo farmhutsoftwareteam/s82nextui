@@ -25,7 +25,7 @@ export default function Home() {
 		  title: 'Stadium',
 		  subtitle: 'iOS 2023',
 		  description: 'A collection of works that reimagine how we narrate a game of football',
-		  link: 'https://res.cloudinary.com/vambo/image/upload/v1700046875/q87tgm1egvaacu7i05ex.jpg'
+		  link: '/stadium'
 		},
 		{
 		  imageUrl: '/xsDemoVid.gif',
