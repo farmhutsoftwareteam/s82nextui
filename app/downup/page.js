@@ -44,7 +44,7 @@ const Stadium = () => {
       height={578}
       radius='none'
     />
-    <p className="text-center mt-2 font-valueserif text-sm">Caption for Image 1</p>
+    <p className="text-center mt-2 font-valueserif text-sm">No Connection</p>
   </div>
   
   {/* Video 1 with caption */}
@@ -53,7 +53,7 @@ const Stadium = () => {
       <source src="/poorConnection.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <p className="text-center mt-2 font-valueserif text-sm">Caption for Video 1</p>
+    <p className="text-center mt-2 font-valueserif text-sm">Poor Connection</p>
   </div>
   
   {/* Video 2 with caption */}
@@ -62,7 +62,7 @@ const Stadium = () => {
       <source src="/goodConnection.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <p className="text-center mt-2 font-valueserif text-sm">Caption for Video 2</p>
+    <p className="text-center mt-2 font-valueserif text-sm">Good Connection</p>
   </div>
   
   {/* Adjust or add more content here as needed */}
