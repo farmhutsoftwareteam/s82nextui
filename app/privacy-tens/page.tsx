@@ -7,7 +7,7 @@ export default function PrivacyPolicyPage() {
       <Head>
         <title>Privacy Policy - Ten-S</title>
       </Head>
-      <div className="pl-20 p-10 justify-center">
+      <div className="justify-center">
         <h1 className="text-xl font-bold">Privacy Policy for Ten-S</h1>
         <p>Last Updated: 4 December 2023</p>
 
