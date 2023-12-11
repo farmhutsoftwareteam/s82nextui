@@ -17,6 +17,7 @@ const Stadium = () => {
     { index: 7, title: 'Note entry 07', uri: 'sample-uri-07', url: '/stadium/note-07' },
     { index: 8, title: 'Note entry 08', uri: 'sample-uri-08', url: '/stadium/note-08' },
     { index: 9, title: 'Note entry 09', uri: 'sample-uri-09', url: '/stadium/note-09' },
+    { index: 10, title: 'Note entry 10', uri: 'sample-uri-10', url: '/stadium/note-10' },
   ];
   
   return (
@@ -29,7 +30,7 @@ const Stadium = () => {
         The game of soccer is something that I enjoy quite a lot. The beautiful play, the tactics, the gamesmanship, everything. These are all things I look forward to experiencing every time I get the chance to watch a game. Of course, there are times when this chance isn’t there and I have to rely on following the game online or through notifications. Experiencing the game in such a manner strips it of all its beauty. All I have left is the scoreline. I have no idea of who has been dominating the game, or whether the game has been clean, or any of the other information that makes soccer fun. This is what this project is about. Quickly telling the story of the game in as much detail as possible and doing so in a beautiful manner.
           {/* Truncate the text as needed */}
         </p>
-        <a href="#" className="mt-4 bg-black rounded-md px-3 w-max  justify-center text-white block text-center py-2">
+        <a href="https://apps.apple.com/app/id6473732987" className="mt-4 bg-black rounded-md px-3 w-max  justify-center text-white block text-center py-2">
           Download from App Store
         </a>
         <div className="w-full mt-6">
