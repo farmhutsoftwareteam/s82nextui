@@ -5,16 +5,11 @@ const Note = () => {
   return (
     <div className="container mx-auto p-4 max-w-3xl">
       <h1 className="text-2xl font-bold text-center mb-6">Timeline Thoughts</h1>
-      <h2 className='text-xl md:text-left text-center mb-6'>Original Note Entry</h2>
+     
 
-      <p className="text-black mt-4 mb-8">
-      I’ve been doing some cooking during the first half of this game….. I’d love to catch up on the match after half time….. not just in terms of watching the match but getting into it with an idea of what it’s been like so far….. the half time stats do give me an abstract impression of what the game has been like…. Possession, shots, etc….. but it doesn’t give me a good picture of what it’s been like so far… what would a good picture of the game actually look like? One that’ll allow me to see everything about the game in detail…. Not just the stats but something that’ll actually make me feel something about the action that I’ve missed….. something that’ll make me get to experience it as well……. Not in terms of the current video play catch up type of thing only (I never use it)…… or in terms of the play by play text (because I don’t actually use that stuff)
-
-      </p>
+     
       <h2 className='text-xl md:text-left text-center mb-6'>Problem Statement</h2>
-      <p className="text-black mt-4 mb-8">
-      I've been busy cooking during the first half of this game, and I'd really like to catch up on the match after halftime. I'm not just talking about watching the match, but really getting into it with an understanding of what it's been like so far. The halftime stats, like possession and shots, give me an extremely abstract impression of the game, but they don't paint a complete picture of the experience so far. What would a good picture of the game look like? One that would allow me to see everything about the game in detail, not just the stats. I'm looking for something that would make me feel something about the action I've missed, something that would let me experience it as well. The current play-by-play text options are too long to consume in a glance.
-      </p>
+    
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
           <Image src="/timeline1.png" alt="Description of first image" width={500} height={300} layout="responsive"/>

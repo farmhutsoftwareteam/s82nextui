@@ -22,7 +22,7 @@ export default function Home() {
 	const projects = [
 		{
 		  imageUrl: '/gibheStadium.jpg',
-		  title: 'Stadium',
+		  title: 'Terrace H4',
 		  subtitle: 'iOS 2023',
 		  description: 'A collection of works that reimagine how we narrate a game of football',
 		  link: '/stadium'

@@ -24,7 +24,7 @@ const Stadium = () => {
 
     <div className="max-w-5xl mx-auto my-10  p-3 grid md:w-full grid-cols-1 md:grid-cols-2 gap-6 ">
       <div className="flex flex-col justify-center md:items-start items-center order-2 md:order-2">
-        <h1 className="text-2xl font-bold text-center md:text-left text-gray-900">Stadium</h1>
+        <h1 className="text-2xl font-bold text-center md:text-left text-gray-900">Terrace H4</h1>
         <p className="text-gray-500 text-center md:text-left">iOS · 2023</p>
         <p className="text-black text-center md:text-left mt-4">
         The game of soccer is something that I enjoy quite a lot. The beautiful play, the tactics, the gamesmanship, everything. These are all things I look forward to experiencing every time I get the chance to watch a game. Of course, there are times when this chance isn’t there and I have to rely on following the game online or through notifications. Experiencing the game in such a manner strips it of all its beauty. All I have left is the scoreline. I have no idea of who has been dominating the game, or whether the game has been clean, or any of the other information that makes soccer fun. This is what this project is about. Quickly telling the story of the game in as much detail as possible and doing so in a beautiful manner.
