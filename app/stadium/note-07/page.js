@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Note = () => {
   return (
@@ -9,8 +10,12 @@ const Note = () => {
 
      
       <h2 className='text-xl md:text-left text-center mb-6'>Problem Statement </h2>
+      <p>
+      I've been busy cooking during the first half of this game, and I'd really like to catch up on the match after halftime. I'm not just talking about watching the match, but really getting into it with an understanding of what it's been like so far. The halftime stats, like possession and shots, give me an extremely abstract impression of the game, but they don't paint a complete picture of the experience so far. What would a good picture of the game look like? One that would allow me to see everything about the game in detail, not just the stats. I'm looking for something that would make me feel something about the action I've missed, something that would let me experience it as well. The current play-by-play text options are too long to consume in a glance.
+  </p>
+
     
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 mt-5 md:grid-cols-3 gap-4">
         <div>
           <Image src="/timeline1.png" alt="Description of first image" width={500} height={300} layout="responsive"/>
         </div>
@@ -33,9 +38,14 @@ const Note = () => {
     What are the problems that a timeline answers? 
     What are the purposes of a timeline?
   </p>
-  <p>
-    Before I could answer these questions, the circular form saved in “Disclosure - Where Angels Fear to tread” came back to mind but I didn’t want to force it on to the problem without answering the questions posed above. In doing my research, I came across this interesting statement from an educators website (colorincolorado) which had this to say about timelines:
-  </p>
+  
+<p>
+  Before I could answer these questions, the circular form saved in <span />
+  <Link href="/stadium/note-10" legacyBehavior>
+    <a className="text-blue-600 hover:text-blue-800">“Disclosure - Where Angels Fear to Tread”</a>
+  </Link>
+  came back to mind but I didn’t want to force it onto the problem without answering the questions posed above. In doing my research, I came across this interesting statement from an educator's website (colorincolorado) which had this to say about timelines:
+</p>
   <p>
     “Educators may find timelines a useful strategy for a variety of educational purposes. They can be used to record events from a story or a history lesson in a sequential format. They can help students keep events in chronological order as they write summaries. But most important of all, they can also provide comprehension support to English language learners (ELLs), helping them make connections and recognize patterns in a series or process. Because numerical markers such as hours, years, days or months are placed apart with plenty of space in between, timelines can appear visually less complex than pure text, helping ELLs more easily relate events to their corresponding times. Both educators and parents can use timelines to help students organize information in a chronological sequence so that they can better understand growth, change, recurring events, cause and effect, and key events of historical, social, and scientific.”
   </p>
