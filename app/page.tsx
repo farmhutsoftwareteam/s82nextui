@@ -44,11 +44,11 @@ export default function Home() {
 	]
 
 	const handlePrevClick = () => {
-        setCurrentProjectIndex(prevIndex => Math.max(0, prevIndex - 1));
+        setCurrentProjectIndex(prevIndex => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
     };
-
+    
     const handleNextClick = () => {
-        setCurrentProjectIndex(prevIndex => Math.min(projects.length - 1, prevIndex + 1));
+        setCurrentProjectIndex(prevIndex => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
     };
 
     useEffect(() => {
