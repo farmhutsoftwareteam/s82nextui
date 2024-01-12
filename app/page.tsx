@@ -93,7 +93,9 @@ export default function Home() {
 
     return (
 		<>
-     <section className="flex h-4/6 flex-col md:flex-row items-center justify-center gap-2 py-2 md:py-6 pt-16">
+   <section className="flex flex-col md:flex-row items-center justify-center gap-2 p-2 md:py-6" style={{ height: 'calc(80vh - 4rem)' }}>
+
+
 
             <div className="flex-1 flex items-center justify-center md:justify-center">
                 <Image 
@@ -115,7 +117,7 @@ export default function Home() {
                 {/* Add more content as needed */}
             </div>
         </section>
-		<div className="justify-center items-center h-2/6">
+		<div className="flex justify-center items-center" style={{ height: 'calc(20vh - 4rem)' }}>
 		<footer className="w-full flex justify-center mt-10"  >
           
             <button onClick={handlePrevClick} ><ChevronLeft size={16} /></button>
