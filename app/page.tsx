@@ -122,7 +122,7 @@ export default function Home() {
             </div>
         </section>
 		<div className="flex justify-center items-center" style={{ height: 'calc(20vh - 4rem)' }}>
-		<footer className="w-full flex justify-center mt-10"  >
+		<footer className="w-full flex justify-center mt-10" style={{ paddingBottom: `max(16px, env(safe-area-inset-bottom))` }} >
           
         <button onClick={handlePrevClick} className="mr-2 sm:mr-3 md:mr-4 lg:mr-5"><ChevronLeft size={16} /></button>
 {currentProjectIndex + 1} / {projects.length}
