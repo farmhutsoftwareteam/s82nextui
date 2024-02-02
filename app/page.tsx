@@ -120,9 +120,9 @@ export default function Home() {
 		<div className="flex justify-center items-center" style={{ height: 'calc(20vh - 4rem)' }}>
 		<footer className="w-full flex justify-center mt-10"  >
           
-            <button onClick={handlePrevClick} ><ChevronLeft size={16} /></button>
-            {currentProjectIndex + 1} / 3
-            <button onClick={handleNextClick} ><ChevronRight size={16} /></button>
+        <button onClick={handlePrevClick} className="mr-2 sm:mr-3 md:mr-4 lg:mr-5"><ChevronLeft size={16} /></button>
+{currentProjectIndex + 1} / {projects.length}
+<button onClick={handleNextClick} className="ml-2 sm:ml-3 md:ml-4 lg:ml-5"><ChevronRight size={16} /></button>
         </footer>
 		</div>
 		
