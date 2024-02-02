@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import { Image } from "@nextui-org/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen ,MoveDown } from "lucide-react";
 
 
 
@@ -110,10 +110,14 @@ export default function Home() {
                 <h1 className="text-xl font-bold mb-2 text-black">{currentProject.title}</h1>
                 <h2 className="text-sm mb-4 text-gray-500">{currentProject.subtitle}</h2>
                 <p className="mb-4 text-center text-black">{currentProject.description}</p>
-                <div className="flex flex-row md:flex-row gap-2">
-                    <a href={currentProject.link} className="flex-1 px-4 py-2 bg-blue-800 text-white rounded-[10px]">Explore</a>
-                    <button className="flex-1 px-4 py-2 bg-green-800 text-white rounded-[10px]">Download</button>
-                </div>
+                <div className="flex flex-row gap-2">
+    <a href={currentProject.link} className="flex items-center justify-center flex-1 px-4 py-2 bg-blue-800 text-white rounded-[10px] text-sm sm:text-base">
+        <BookOpen size={20} className="mr-2" /> Explore
+    </a>
+    <button className="flex items-center justify-center flex-1 px-4 py-2 bg-green-800 text-white rounded-[10px] text-sm sm:text-base">
+        <MoveDown size={15} className="mr-2" /> Download
+    </button>
+</div>
                 {/* Add more content as needed */}
             </div>
         </section>
