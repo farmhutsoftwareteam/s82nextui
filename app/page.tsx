@@ -111,7 +111,7 @@ export default function Home() {
                 <h2 className="text-sm mb-4 text-gray-500">{currentProject.subtitle}</h2>
                 <p className="mb-4 text-center text-black">{currentProject.description}</p>
                 <div className="flex flex-row gap-2">
-    <a href={currentProject.link} className="flex items-center justify-center flex-1 px-4 py-2 bg-blue-800 text-white rounded-[10px] text-sm sm:text-base">
+    <a href={currentProject.link} className="flex items-center justify-center flex-1 px-4 py-3 bg-blue-800 text-white rounded-[10px] text-sm sm:text-base">
         <BookOpen size={20} className="mr-2" /> Explore
     </a>
     <button className="flex items-center justify-center flex-1 px-4 py-2 bg-green-800 text-white rounded-[10px] text-sm sm:text-base">
